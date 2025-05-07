@@ -1,0 +1,33 @@
+{
+	"name": "seo-check",
+	"version": "1.0.0",
+	"description": "A GitHub Action to enforce basic on-page SEO and accessibility",
+	"homepage": "https://github.com/ds-dotsoft/seo-check#readme",
+	"bugs": {
+		"url": "https://github.com/ds-dotsoft/seo-check/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ds-dotsoft/seo-check.git"
+	},
+	"license": "MIT",
+	"author": "dotsoft",
+	"type": "commonjs",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsup src/index.ts --format cjs --dts --minify",
+		"test": "node dist/index.js --dry-run"
+	},
+	"dependencies": {
+		"@actions/core": "^1.11.1",
+		"@actions/github": "^6.0.0",
+		"cheerio": "^1.0.0",
+		"fast-glob": "^3.3.3"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.14",
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.3"
+	}
+}

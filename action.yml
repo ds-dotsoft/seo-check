@@ -1,0 +1,20 @@
+name: 'Dotsoft SEO Check'
+description: 'Fail PRs if essential SEO & accessibility tags are missing.'
+author: 'Dotsoft (https://dotsoft.org/)'
+branding:
+    icon: 'search'
+    color: 'blue'
+
+inputs:
+    token:
+        description: 'GitHub token'
+        default: ${{ github.token }}
+        required: false
+    fail_on_warning:
+        description: 'Treat warnings as errors'
+        default: 'false'
+        required: false
+
+runs:
+    using: 'node20'
+    main: 'dist/index.js'
